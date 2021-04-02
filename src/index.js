@@ -150,11 +150,13 @@
 // console.log(arr3);
 
 //配列のコピー・結合
-const arr4 = [10, 20];
-const arr5 = [30, 40];
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
 
 // const arr6 = [...arr4];
+// arr6[0] = 100
 // console.log(arr6);
+// console.log(arr4); //arr4に対して、影響を受けない
 
 // const arr7 = [...arr4,...arr5];
 // console.log(arr7);
@@ -163,3 +165,46 @@ const arr5 = [30, 40];
 // arr8[0] = 100;
 // console.log(arr8);
 // console.log(arr4);//arr4にも影響が出てしまう。
+
+/**
+ * mapやfelterを使った配列の処理
+ */
+const nameArr = ["田中", "小林", "和田", "Tsuyoppe"];
+
+//従来のFor文を用いたモノ
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(nameArr[index]);
+// }
+
+//Mapを用いて表示する
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// });
+// console.log(nameArr2);
+
+//nameArr.map((name,index) => console.log(`${index + 1}番目の名前は${name}さんです。`));
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "Tsuyoppe" ) {
+//     return name;
+//   } else {
+//     return `${name}さん`
+//   }
+// })
+// console.log(newNameArr);
+
+//Filter
+// const num1 = [1, 2, 3, 4, 5];
+// const newNumArr = num1.filter((num) => {
+//   return num % 2 === 1;
+// });
+// console.log(newNumArr);
+
+/**
+ * 三項演算子
+ */
+//　ある条件 ? ある条件がTrueの時実行 : ある条件がFalseの時実行
+// const val1 = 1 === 0 ? "0です。" : "0以外です。";
+// console.log(val1);
+
+const num = 1300;
+console.log(num.toLocaleString()); //toLocalStringは3桁ごとにコンマを売ってくれる
