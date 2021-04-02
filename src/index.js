@@ -206,5 +206,41 @@ const nameArr = ["田中", "小林", "和田", "Tsuyoppe"];
 // const val1 = 1 === 0 ? "0です。" : "0以外です。";
 // console.log(val1);
 
-const num = 1300;
-console.log(num.toLocaleString()); //toLocalStringは3桁ごとにコンマを売ってくれる
+// const num = 1300;
+// console.log(num.toLocaleString()); //toLocalStringは3桁ごとにコンマを売ってくれる
+
+// const num = "1300";
+//文字列の場合、toLocaleStringが使えない
+//console.log(num.toLocaleString()); //toLocaleStringは3桁ごとにコンマを売ってくれる
+
+// const formattedNum =
+//   typeof num === "number" ? Number.toLocaleString : "数値を入力してください!!";
+// console.log(formattedNum);
+
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? "100を超えています！" : "許容範囲内です！";
+// };
+// console.log(checkSum(40,100));
+
+/**
+ * 論理演算子の本当の意味を知ろう
+ */
+// const flag1 = true;
+// const flag2 = false;
+// if (flag1 || flag2) {
+//   console.log("1または2はTrueです！");
+// }
+
+// if (flag1 && flag2) {
+//   console.log("1または2はTrueです！");
+// }
+
+// //は左側がFalseであれば右側を返す処理
+const num = null;
+const fee = num || 100;
+console.log(fee);
+
+//　&&は左側がTrueであれば右側を返す処理
+const num2 = 100;
+const fee2 = num2 && 1000;
+console.log(fee2);
